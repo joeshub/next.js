@@ -326,7 +326,7 @@ describe('Error overlay - RSC build errors', () => {
 
     expect(await session.hasRedbox()).toBe(true)
     expect(await session.getRedboxSource()).toInclude(
-      `You're importing a component that needs server-only. That only works in a Server Component but one of its parents is marked with "use client", so it's a Client Component.`
+      `You're importing a component that needs "server-only". That only works in a Server Component but one of its parents is marked with "use client", so it's a Client Component.`
     )
 
     await cleanup()
